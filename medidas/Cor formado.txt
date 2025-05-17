@@ -1,0 +1,2 @@
+Cor formado = IF([% Alunos Formados em relação ao peridodo anterior] == "Sem avaliações", "#000000",
+    IF(CONTAINSSTRING([% Alunos Formados em relação ao peridodo anterior], "-"), "#b81414", "#008000"))

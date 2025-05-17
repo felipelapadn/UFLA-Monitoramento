@@ -1,0 +1,4 @@
+% Alunos SiSU = 
+var result = DIVIDE([Total de alunos ativos], [Total de Alunos])
+RETURN 
+IF(result <> BLANK(), result, "Sem dados")

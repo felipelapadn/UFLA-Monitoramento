@@ -1,0 +1,9 @@
+Retorno alunos ing = 
+var verif = IF([Periodo atual] == "2022/1", 0, 1)
+var verif2 = IF([% Alunos ing em relação ao peridodo anterior] == BLANK(), "Sem avaliações", [% Alunos ing em relação ao peridodo anterior])
+RETURN
+IF(ISTEXT(verif2), verif2, 
+IF(verif == 0, "Sem avaliações.", 
+FORMAT(ABS([% Alunos ing em relação ao peridodo anterior]), "0.00%") & 
+IF([% Alunos ing em relação ao peridodo anterior] < 0, " a menos", " a mais")
+& " que o período anterior."))

@@ -1,0 +1,17 @@
+Diff Alunos ativos ao peridodo anterior = //em relação  ao total de alunos que foram avaliados por período
+var atual = [Total de alunos ativos]
+var periodo = SELECTEDVALUE(tbAlunos[semestre_letivo_referencia])
+var periodo_ultimo = 
+
+SWITCH(periodo,
+        "2023/2", "2023/1",
+        "2023/1", "2022/2",
+        "2022/2", "2022/1",
+        "Sem dados")
+
+var atv_ultimo = IF(periodo_ultimo == "Sem dados", BLANK(), 
+                    CALCULATE( [Total de alunos ativos], tbAlunos[semestre_letivo_referencia] == periodo_ultimo))
+var valid = IF(ISTEXT(atv_ultimo), 0, atv_ultimo)
+var valid2 = IF(ISTEXT(atual), 0, atual)
+RETURN
+IF(valid > 0 && valid2 > 0, (atual - atv_ultimo), "Sem dados")

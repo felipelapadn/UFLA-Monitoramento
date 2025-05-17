@@ -1,0 +1,4 @@
+Total de Alunos Forma Ing. Periodo = 
+var result = CALCULATE([Total de Alunos], tbAlunos[semestre_letivo_ingresso] == SELECTEDVALUE(tbAlunos[semestre_letivo_referencia]))
+RETURN 
+IF(result <> BLANK(), result, 0)

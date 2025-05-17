@@ -1,0 +1,12 @@
+Periodo anterior = 
+
+var periodo = SELECTEDVALUE(tbAlunos[semestre_letivo_referencia])
+var periodo_ultimo = 
+
+SWITCH(periodo,
+        "2023/2", "2023/1",
+        "2023/1", "2022/2",
+        "2022/2", "2022/1", "")
+
+RETURN
+periodo_ultimo

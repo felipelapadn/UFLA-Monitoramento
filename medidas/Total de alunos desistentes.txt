@@ -1,0 +1,4 @@
+Total de alunos desistentes = 
+var result = CALCULATE([Total de alunos desvinculados], tbAlunos[situacao_nome] == "Desistiu do curso")
+RETURN 
+IF(result <> BLANK(), result, "Sem dados")

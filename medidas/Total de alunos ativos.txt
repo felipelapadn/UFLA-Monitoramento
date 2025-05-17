@@ -1,0 +1,4 @@
+Total de alunos ativos = 
+var result = CALCULATE([Total de Alunos], 'tbAlunos'[situacao_estudante] == "Ativo")
+RETURN 
+IF(result <> BLANK(), result, "Sem dados")

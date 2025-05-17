@@ -1,0 +1,6 @@
+Cor top1 = 
+var filtro = CALCULATE([Total de Alunos], FILTER(tbAlunos, [Ranking Cursos] = 1))
+
+return
+
+filtro

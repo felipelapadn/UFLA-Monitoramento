@@ -1,0 +1,2 @@
+Total de alunos matriculados rank = 
+CALCULATE([Total de Alunos], tbAlunos[situacao_nome] == "Matriculado")

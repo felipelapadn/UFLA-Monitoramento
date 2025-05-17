@@ -1,0 +1,2 @@
+Cor Desistentes = IF([% Alunos desistentes em relação ao peridodo anterior] == "Sem avaliações", "#000000",
+IF(CONTAINSSTRING([% Alunos desistentes em relação ao peridodo anterior], "-"), "#008000", "#b81414"))

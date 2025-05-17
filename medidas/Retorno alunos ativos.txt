@@ -1,0 +1,10 @@
+Retorno alunos ativos = 
+var verif = IF([Periodo atual] == "2022/1", 0, 1)
+var verif2 = IF([% Alunos desistentes em relação ao peridodo anterior] == BLANK(), "Sem avaliações", [% Alunos ing em relação ao peridodo anterior])
+
+
+RETURN
+IF(verif == 0, "Sem avaliações.", 
+"O perído de " & FORMAT([Periodo atual], "Currency") & " registrou " & ABS([Diff Alunos ativos ao peridodo anterior])
+& IF([Diff Alunos ativos ao peridodo anterior] < 0, " alunos ativos a menos", " alunos ativos a mais") & " que o período de " & [Periodo anterior] & ". Representando " &
+IF([Diff Alunos ativos ao peridodo anterior] < 0, " uma queda de ", " um aumento de ") & FORMAT(ABS([% Alunos ativos ao peridodo anterior]), "0.00%") & ".")

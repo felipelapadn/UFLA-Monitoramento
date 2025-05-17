@@ -1,0 +1,4 @@
+Total de alunos matriculados cat = 
+var result = CALCULATE([Total de Alunos], tbAlunos[situacao_nome] == "Matriculado")
+RETURN 
+IF(result <> BLANK(), result, "Sem dados")

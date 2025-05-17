@@ -1,0 +1,2 @@
+Total por situação do sensu = 
+COUNT(tbAlunos[situacao_censo])

@@ -1,0 +1,4 @@
+Total de alunos aprovados = 
+var result = CALCULATE([Total de Alunos], 'tbAlunos'[situacao_censo] == "Formado")
+RETURN 
+IF(result <> BLANK(), result, "Sem dados")

@@ -1,0 +1,17 @@
+% Alunos desistentes em relação ao peridodo anterior = //em relação  ao total de alunos que foram avaliados por período
+var atual = [Total de alunos desistentes]
+var periodo = SELECTEDVALUE(tbAlunos[semestre_letivo_referencia])
+var periodo_ultimo = 
+
+SWITCH(periodo,
+        "2023/2", "2023/1",
+        "2023/1", "2022/2",
+        "2022/2", "2022/1",
+        BLANK())
+
+var desistentes_ultimo = IF(periodo_ultimo == BLANK(), BLANK(), 
+                    CALCULATE( [Total de alunos desistentes], tbAlunos[semestre_letivo_referencia] == periodo_ultimo))
+var valid = IF(ISTEXT(desistentes_ultimo), 0, desistentes_ultimo)
+var valid2 = IF(ISTEXT(atual), 0, atual)
+RETURN
+IF(valid > 0 && valid2 > 0, FORMAT((atual - desistentes_ultimo)/desistentes_ultimo, "+0.00%;-0.00%"), "Sem avaliações")

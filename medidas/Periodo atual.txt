@@ -1,0 +1,6 @@
+Periodo atual = 
+
+var periodo = SELECTEDVALUE(tbAlunos[semestre_letivo_referencia])
+
+RETURN
+periodo

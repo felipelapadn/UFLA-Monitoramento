@@ -1,0 +1,10 @@
+Ranking Cursos = 
+
+var tbCursos = ALL(tbAlunos[curso])
+
+RETURN
+
+RANKX(
+    tbCursos,
+    [Total de Alunos]
+)

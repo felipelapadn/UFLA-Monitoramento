@@ -6,4 +6,3 @@ Como os dados eram categóricos, foi necessário um estudo aprofundado para dese
 O design do relatório foi planejado no Figma, o que permitiu a criação de uma interface clara e intuitiva. Houve uma grande evolução na construção dos cards, e considero essa uma das etapas mais desafiadoras.
 
 ![image](https://github.com/user-attachments/assets/c504c381-9727-42d9-93e6-f18076be04cf)
-

@@ -1,0 +1,2 @@
+Cor ing. = IF([% Alunos ing em relação ao peridodo anterior] == "Sem avaliações", "#000000",
+IF(CONTAINSSTRING([% Alunos ing em relação ao peridodo anterior], "-"), "#b81414", "#008000"))

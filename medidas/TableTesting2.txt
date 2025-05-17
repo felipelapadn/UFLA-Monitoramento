@@ -1,0 +1,6 @@
+TableTesting2 = 
+VAR __SelectedValue = SELECTEDVALUE(tbAlunos[semestre_letivo_referencia])
+
+RETURN
+
+CALCULATE(COUNTROWS(tbAlunos), tbAlunos[situacao_censo])

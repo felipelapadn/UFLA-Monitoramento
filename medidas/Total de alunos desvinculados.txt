@@ -1,0 +1,4 @@
+Total de alunos desvinculados = 
+var result = CALCULATE([Total de Alunos], 'tbAlunos'[situacao_censo] == "Desvinculado") 
+RETURN
+IF(result <> BLANK(), result, "Sem dados")

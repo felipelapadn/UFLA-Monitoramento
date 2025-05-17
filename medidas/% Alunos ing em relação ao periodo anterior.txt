@@ -1,0 +1,17 @@
+% Alunos ing em relação ao peridodo anterior = //em relação  ao total de alunos que foram avaliados por período
+var atual = [Total de Alunos Ing. por Período]
+var periodo = SELECTEDVALUE(tbAlunos[semestre_letivo_referencia])
+var periodo_ultimo = 
+
+SWITCH(periodo,
+        "2023/2", "2023/1",
+        "2023/1", "2022/2",
+        "2022/2", "2022/1",
+        BLANK())
+
+var ing_ultimo = IF(periodo_ultimo == BLANK(), BLANK(), 
+                    CALCULATE( [Total de Alunos Ing. por Período], tbAlunos[semestre_letivo_referencia] == periodo_ultimo))
+var valid = IF(ISTEXT(ing_ultimo), 0, ing_ultimo)
+var valid2 = IF(ISTEXT(atual), 0, atual)
+RETURN
+IF(valid > 0 && valid2 > 0, FORMAT(((atual - ing_ultimo)/ing_ultimo), "+0.00%;-0.00%"), "Sem avaliações")

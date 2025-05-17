@@ -1,0 +1,1 @@
+Total de Alunos = IF(COUNT(tbAlunos[codigo_inep]) == BLANK(), BLANK(), COUNT(tbAlunos[codigo_inep]))
